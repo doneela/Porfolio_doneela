@@ -1,0 +1,1109 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(24, 22, 22);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    border-radius: 2rem;
+}
+
+
+/* HOME */
+
+.homepage {
+    background-color: rgb(24, 22, 22);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.myname {
+    color: white;
+    font-size: 5rem;
+    padding-left: 7rem;
+    letter-spacing: 0.1rem;
+    line-height: 4rem;
+}
+
+.myname span {
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myname span1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    line-height: 3rem;
+}
+
+.myname span2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 4rem;
+}
+
+.homeouter {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-left: 13rem;
+    background-image: linear-gradient(180deg, #d2cae2 0%, #550be9 25%, #1f68d6 50%, #1FD1F9 100%);
+    border-radius: 15rem;
+    transform: rotate(40deg);
+}
+
+.homepic img {
+    object-fit: cover;
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    transform: rotate(-40deg);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 180;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, #d2cae2 0%, #550be9 25%, #1f68d6 50%, #1FD1F9 100%);
+    border-radius: 2rem;
+}
+
+.navbar:hover {
+    background-image: linear-gradient(3600deg, #d2cae2 0%, #550be9 25%, #1f68d6 50%, #1FD1F9 100%);
+}
+
+.navbar .icon {
+    width: 3rem;
+    height: 3.5rem;
+    margin-top: 2rem;
+}
+
+.navbar .five {
+    width: 2rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.mouse_scroll {
+    display: block;
+    margin: 0 auto;
+    max-width: 24px;
+    max-height: 100px;
+    margin-top: 125px;
+}
+
+.m_scroll_arrows {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 0 0 3px 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.unu {
+    margin-top: 1px;
+}
+
+.unu,
+.doi,
+.trei {
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+}
+
+.unu {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    animation-delay: alternate;
+}
+
+.doi {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .2s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+.trei {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .3s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+.mouse {
+    height: 42px;
+    width: 24px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid white;
+    top: 170px;
+}
+
+.wheel {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: white;
+    position: relative;
+    height: 4px;
+    width: 4px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.wheel {
+    -webkit-animation: mouse-wheel 0.6s linear infinite;
+    -moz-animation: mouse-wheel 0.6s linear infinite;
+    animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+
+@-moz-keyframes mouse-wheel {
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@-o-keyframes mouse-wheel {
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@keyframes mouse-wheel {
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@-webkit-keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.aboutpage {
+    background-color: rgb(252, 245, 245);
+    width: 100%;
+    height: auto;
+}
+
+.myabout span {
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myabout {
+    font-size: 4rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    font-weight: 900;
+}
+
+.myabout::before {
+    content: '';
+    position: absolute;
+    width: 14rem;
+    height: 0.3rem;
+    background-color: rgb(20, 33, 220);
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        width: 5rem;
+    }
+    50% {
+        width: 15rem;
+    }
+    100% {
+        width: 5rem;
+    }
+}
+
+.mypic img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.mypic {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: 3rem;
+}
+
+.linkdin {
+    width: 32px;
+    height: 32px;
+}
+
+.facebook {
+    width: 17px;
+    height: 30px;
+}
+
+.instagram {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons svg {
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.mypic .social-icons {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.2s;
+    flex-direction: column-reverse;
+    right: -3rem;
+    z-index: 130;
+    align-items: flex-start;
+}
+
+.mypic figure {
+    -webkit-filter: grayscale(0) blur(0);
+    filter: grayscale(0) blur(0);
+    -webkit-transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.mypic figure:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.mypic .social-icons:hover {
+    opacity: 1;
+}
+
+.text .mydetailshead {
+    color: #550be9;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+}
+
+.typewrite .wrap {
+    border-right: 0.08em solid #550be9
+}
+
+.text {
+    padding-left: 4rem;
+    padding-right: 5rem;
+    padding-top: 3rem;
+}
+
+.text .mydetailtail {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.button-primary {
+    padding: 24px 60px;
+    border-style: none;
+    border-radius: 80px;
+    background-color: rgb(24, 22, 22);
+    transition: color 300ms ease, transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    color: rgb(252, 245, 245);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    transform-style: preserve-3d;
+    margin-top: 5rem;
+}
+
+.w-button {
+    display: inline-block;
+    padding: 15px 15px;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    background-color: rgb(252, 245, 245);
+    box-shadow: 0 4px 20px -5px rgb(20 20 43 / 15%);
+    -webkit-transform: translate3d(0px, -6px, 0.01px);
+    transform: translate3d(0px, -6px, 0.01px);
+    color: #14142b;
+}
+
+
+/* Skills */
+
+.skillpage {
+    background-color: rgb(56, 49, 49);
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+.myskill span {
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myskill {
+    font-size: 4rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    padding-top: 2.5rem;
+}
+
+.services-main-wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+._2-column-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 3.5rem;
+    row-gap: 3.5rem;
+    padding-left: 8rem;
+    padding-right: 5rem;
+}
+
+.card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgb(24, 22, 22);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image .service-icon {
+    align-items: center;
+    display: inline-block;
+}
+
+.title.service-title {
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin-bottom: 21rem;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.33em;
+    font-weight: 700;
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.skill_text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.service-paragraph {
+    line-height: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-align: justify;
+}
+
+
+/* Footer */
+
+.footerpage {
+    background-color: rgb(24, 22, 22);
+    width: 100%;
+    min-height: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    margin-right: auto;
+    row-gap: 3rem;
+    z-index: 50;
+}
+
+.mycontacts {}
+
+.mycontacts .name {
+    font-size: 2rem;
+}
+
+.mycontacts .myself {
+    font-size: 1.2rem;
+    letter-spacing: 2.6;
+    line-height: 1.4rem;
+    padding-top: 1.5rem;
+}
+
+.mycontacts .social-contacts .image {
+    /* font-size: 2rem; */
+    background-color: #fff;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mycontacts .social-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mycontacts .myself {
+    font-size: 0.8rem;
+    letter-spacing: 2.6;
+    line-height: 1.4rem;
+    padding-top: 1.5rem;
+}
+
+.myaddress .name {
+    font-size: 2rem;
+}
+
+.myaddress .myself {
+    font-size: 0.8rem;
+    letter-spacing: 2.6;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.myaddress .myself .image {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    width: 32px;
+    min-height: 32px;
+}
+
+.myaddress .myself .contact-link-wrapper .text {
+    color: #fff;
+    line-height: 0;
+    padding-top: 0;
+    padding-left: 1rem;
+}
+
+.myaddress .myself .contact-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    transition: all 0.2s ease;
+    background: #d2d5d8;
+    border: 0;
+    font-weight: bold;
+    /* margin: 2rem auto; */
+    display: block;
+    border-radius: 25px;
+    position: relative;
+    outline: none;
+    padding: 3px;
+    cursor: pointer;
+    min-width: 200px;
+    animation-name: button;
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 2rem;
+}
+
+.btn-text {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    opacity: 1;
+    animation-name: button-text;
+    animation-duration: 0.75s;
+    animation-delay: 1.3s;
+    animation-fill-mode: backwards;
+}
+
+button:before,
+button:after,
+button span:before,
+button span:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+}
+
+button:before {
+    animation-name: button-before;
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+button:after {
+    animation-name: button-after;
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.btn-inner {
+    max-width: 250px;
+    position: relative;
+    background: #d2d5d8;
+    padding: 1rem 4rem;
+    display: block;
+    border-radius: 25px;
+    position: relative;
+    animation-name: button-inner;
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+button.active .btn-text {
+    font-size: 0.95rem;
+}
+
+button.active .btn-inner:before {
+    box-shadow: 4px 4px 10px inset #9496B0;
+    -webkit-box-shadow: 4px 4px 10px inset #9496B0;
+}
+
+button.active .btn-inner:after {
+    box-shadow: -4px -4px 10px inset #fff;
+    -webkit-box-shadow: -4px -4px 10px inset #fff;
+}
+
+@keyframes button-before {
+    from {
+        box-shadow: 0 0 0 #fff;
+    }
+    to {
+        box-shadow: -10px -8px 20px #fff;
+    }
+}
+
+@keyframes button-after {
+    from {
+        box-shadow: 0 0 0 #9496B0;
+    }
+    to {
+        box-shadow: 10px 8px 20px #9496B0;
+    }
+}
+
+@keyframes button-inner {
+    from {
+        background: #d2d5d8;
+    }
+    to {
+        background: linear-gradient(165deg, rgba(255, 255, 255, 1) 0%, rgba(210, 213, 216, 1) 50%, rgba(210, 213, 216, 1) 95%, rgba(148, 150, 176, 1) 100%);
+    }
+}
+
+@keyframes button {
+    from {
+        background: #d2d5d8;
+    }
+    to {
+        background: linear-gradient(165deg, rgba(255, 255, 255, 1) 10%, rgba(148, 150, 176, 1) 100%);
+    }
+}
+
+@keyframes button-text {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* MY projects */
+
+.projectpage {
+    background-color: rgb(252, 245, 245);
+    width: 100%;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.myproject span {
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myproject {
+    font-size: 4rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    font-weight: 900;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    row-gap: 3rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.projectpic img {
+    max-width: 40rem;
+    max-height: 30rem;
+    border-radius: 3rem;
+}
+
+.projectdetails {
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-right: 5rem;
+}
+
+.projects .projectheadline {
+    font-size: 2.5rem;
+    background: linear-gradient(180deg, #3a3642 0%, #385183 50%, #1b28dd 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.projectext {
+    padding-top: 1rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+
+/* horizontal-scroll */
+
+.Societies {
+    height: 1.8rem;
+    width: 100%;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    font-size: 1.3rem;
+    color: rgb(24, 22, 22);
+}
+
+.Societies>div {
+    display: inline-block;
+}
+
+.Societies .responsibility {
+    animation: divmove 10s linear infinite;
+}
+
+.Societies span {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+@keyframes divmove {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -900px;
+    }
+}
+
+.myresponsibility span {
+    background: linear-gradient(270deg, #550be9 0%, #1f68d6 50%, #1FD1F9 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.myresponsibility {
+    font-size: 2rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:600px) {
+    .mypic {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        padding-left: 0rem;
+        padding-top: 1rem;
+    }
+    .mypic img {
+        width: 12rem;
+        height: 12rem;
+    }
+    .myname {
+        padding-left: 4.5rem;
+        font-size: 3rem;
+    }
+    .text {
+        padding-left: 3.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .mypic .social-icons {
+        right: -2rem;
+    }
+    .linkdin {
+        width: 22px;
+        height: 22px;
+    }
+    .facebook {
+        width: 10px;
+        height: 20px;
+    }
+    .instagram {
+        width: 20px;
+        height: 20px;
+    }
+    .text .mydetailtail {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.3rem;
+        padding-left: 3.5rem;
+        padding-right: 2.5rem;
+    }
+    .text .mydetailshead {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+        padding-left: 3.5rem;
+    }
+    .homepic img {
+        display: none;
+    }
+    .projectpic img {
+        max-width: 20rem;
+        max-height: 10rem;
+        border-radius: 2rem;
+    }
+    .horizontal-scroll {
+        display: none;
+    }
+}
+
+.aboutpage .mouse_scroll {
+    margin-top: 25;
+}
+
+.aboutpage .mouse {
+    border: 2px solid rgb(26, 24, 24);
+}
+
+.aboutpage .wheel {
+    background: rgb(26, 24, 24);
+    border: 2px solid rgb(26, 24, 24);
+}
+
+.aboutpage .m_scroll_arrows {
+    border-right: 2px solid rgb(26, 24, 24);
+    border-bottom: 2px solid rgb(26, 24, 24);
+}
+
+@media screen and (max-width:700px) {
+    /* .project {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    } */
+    .projectpic img {
+        max-width: 20rem;
+        max-height: 10rem;
+        border-radius: 2rem;
+    }
+    /* #two {
+        flex-direction: column-reverse;
+    } */
+    ._2-column-grid {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 3rem;
+        margin-right: 2.5rem;
+    }
+    .homepage {
+        flex-wrap: wrap;
+    }
+    /* .mouse_scroll {
+        margin: 0;
+    } */
+    .projectdetails {
+        text-align: justify;
+        padding-top: 0;
+        padding-right: 1rem;
+        padding-left: 2.5rem;
+        font-size: 0.7rem;
+    }
+    .projects .projectheadline {
+        font-size: 2rem;
+    }
+    .navbar .icon {
+        width: 2rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+    }
+    .myproject {
+        font-size: 3rem;
+        padding-top: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .mycontacts {
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .mypic {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
+    .aboutpage {
+        padding-bottom: 2rem;
+    }
+    .text {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .myaddress {
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .homepic img {
+        display: none;
+    }
+    .project {
+        flex-wrap: wrap;
+    }
+    #two {
+        flex-direction: column-reverse;
+    }
+    .project {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .projectdetails {
+        text-align: justify;
+        padding-top: 0;
+        /* padding-right: 5rem;
+        padding-left: 7rem; */
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .homeouter {
+        display: none;
+    }
+}
